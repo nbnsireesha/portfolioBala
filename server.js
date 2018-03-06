@@ -70,5 +70,7 @@ app.post('/send', (req, res) => {
       //res.render('contact', {msg:'Email has been sent'});
   });
   });
-
-app.listen(3000, () => console.log('Server started...'));
+const PORT = process.env.PORT || 3001;
+var server = app.listen(PORT, function() {
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
+});
